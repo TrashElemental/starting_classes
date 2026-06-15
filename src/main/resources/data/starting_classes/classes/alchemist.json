@@ -1,0 +1,94 @@
+{
+  "id": "starting_classes:alchemist",
+  "name": "Alchemist",
+  "description": "An alchemist in search of fresh reagents and new recipes.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:potion"
+  },
+  "equipment": [
+
+    {
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:nether_wart",
+      "count": 3
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:soul_sand",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:brewing_stand",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:blaze_powder",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:gunpowder",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:redstone",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:glowstone_dust",
+        "count": 1
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+            "item": "minecraft:potion",
+            "count": 1,
+            "nbt": "{Potion:\"minecraft:leaping\"}"
+        },
+        {
+            "item": "minecraft:potion",
+            "count": 1,
+            "nbt": "{Potion:\"minecraft:healing\"}"
+          }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:potion",
+          "count": 1,
+          "nbt": "{Potion:\"minecraft:swiftness\"}"
+        },
+        {
+          "item": "minecraft:potion",
+          "count": 1,
+          "nbt": "{Potion:\"minecraft:regeneration\"}"
+        }
+      ]
+    }
+  ],
+  "attributes": []
+}

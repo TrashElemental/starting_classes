@@ -1,0 +1,114 @@
+{
+  "id": "starting_classes:ranger",
+  "name": "Ranger",
+  "description": "A woodsman who hunts with his bow alongside his wolf companion.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:bow"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:leather_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_leggings",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_boots",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_mutton",
+        "count": 6
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:bow",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:power\",lvl:1}]}"
+        },
+        {
+          "item": "minecraft:crossbow",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:quick_charge\",lvl:1}]}"
+        }
+      ]
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:arrow",
+        "count": 64
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:stone_sword",
+          "count": 1
+        },
+        {
+          "item": "minecraft:stone_axe",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:campfire",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:rotten_flesh",
+        "count": 5
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:wolf_spawn_egg",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "supplementaries:quiver",
+        "count": 1
+      }
+    },
+    {
+      "type": "mob",
+      "entityId": "minecraft:wolf",
+      "count": 1
+    }
+  ]
+}

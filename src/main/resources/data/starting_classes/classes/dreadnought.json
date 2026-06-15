@@ -1,0 +1,79 @@
+{
+  "id": "starting_classes:dreadnought",
+  "name": "Dreadnought",
+  "description": "A defensive warrior who stands sturdy in the face of danger.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:shield"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:leather_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1,
+        "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}"
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_leggings",
+        "count": 1,
+        "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}"
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_boots",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_porkchop",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:shield",
+        "count": 1,
+        "nbt": "{Enchantments:[{id:\"minecraft:unbreaking\",lvl:2}]}"
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:stone_sword",
+          "count": 1
+        },
+        {
+          "item": "minecraft:stone_axe",
+          "count": 1
+        }
+      ]
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:potion",
+        "count": 1,
+        "nbt": "{Potion:\"minecraft:turtle_master\"}"
+      }
+    }
+  ],
+  "attributes": []
+}

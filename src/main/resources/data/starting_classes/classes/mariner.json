@@ -1,0 +1,59 @@
+{
+  "id": "starting_classes:mariner",
+  "name": "Mariner",
+  "description": "A sailor who dives for treasure beneath the waves.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:trident"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:turtle_helmet",
+      "count": 1,
+      "nbt": "{Enchantments:[{id:\"minecraft:aqua_affinity\",lvl:1}]}"
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_boots",
+        "count": 1,
+        "nbt": "{Enchantments:[{id:\"minecraft:depth_strider\",lvl:1}]}"
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_cod",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:fishing_rod",
+        "count": 1,
+        "nbt": "{Enchantments:[{id:\"minecraft:lure\",lvl:1}]}"
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:trident",
+        "count": 1,
+        "nbt": "{Enchantments:[{id:\"minecraft:loyalty\",lvl:1}]}"
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:oak_chest_boat",
+        "count": 1
+      }
+    }
+  ],
+  "attributes": []
+}
