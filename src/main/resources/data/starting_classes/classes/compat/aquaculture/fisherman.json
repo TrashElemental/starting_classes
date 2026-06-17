@@ -1,11 +1,11 @@
 {
-  "id": "starting_classes:mariner",
-  "name": "Mariner",
-  "description": "A sailor who dives for treasure beneath the waves.",
-  "source": "Starting Classes",
+  "id": "aquaculture:mariner",
+  "name": "Fisherman",
+  "description": "A fisherman who makes their living on the rivers and oceans.",
+  "source": "Aquaculture 2",
   "icon": {
     "type": "item",
-    "itemId": "minecraft:trident"
+    "itemId": "aquaculture:iron_fishing_rod"
   },
   "equipment": [{
     "type": "fixed",
@@ -33,24 +33,14 @@
     {
       "type": "fixed",
       "item": {
-        "item": "minecraft:fishing_rod",
-        "count": 1,
-        "nbt": "{Enchantments:[{id:\"minecraft:lure\",lvl:1}]}"
+        "item": "aquaculture:iron_fishing_rod",
+        "count": 1
       }
     },
     {
       "type": "fixed",
       "item": {
-        "item": "minecraft:trident",
-        "count": 1,
-        "nbt": "{Enchantments:[{id:\"minecraft:loyalty\",lvl:1}]}"
-      }
-    },
-
-    {
-      "type": "fixed",
-      "item": {
-        "item": "minecraft:oak_chest_boat",
+        "item": "aquaculture:iron_fillet_knife",
         "count": 1
       }
     },
@@ -58,16 +48,36 @@
     {
       "type": "fixed",
       "item": {
-        "item": "minecraft:map",
+        "item": "aquaculture:tackle_box",
         "count": 1
       }
     },
-
     {
       "type": "fixed",
       "item": {
-        "item": "minecraft:nautilus_shell",
-        "count": 3
+        "item": "aquaculture:iron_hook",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:bobber",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:fishing_line",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:worm",
+        "count": 5
       }
     }
   ]

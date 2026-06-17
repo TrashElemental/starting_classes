@@ -82,6 +82,5 @@
       "count": 1,
       "nbt": "{Tame:1b,ChestedHorse:1b,SaddleItem:{id:\"minecraft:saddle\",Count:1b}}"
     }
-  ],
-  "attributes": []
+  ]
 }

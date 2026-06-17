@@ -1,0 +1,100 @@
+{
+  "id": "ars_nouveau:sorcerer",
+  "name": "Sorcerer",
+  "description": "An apprentice of the arcane, seeking to learn more about the mysteries of Source.",
+  "source": "Ars Nouveau",
+  "icon": {
+    "type": "item",
+    "itemId": "ars_nouveau:novice_spell_book"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "ars_nouveau:sorcerer_hood",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "ars_nouveau:sorcerer_robes",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "ars_nouveau:sorcerer_leggings",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "ars_nouveau:sorcerer_boots",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "ars_nouveau:novice_spell_book",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "ars_nouveau:scribes_table",
+        "count": 1
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "ars_nouveau:glyph_aoe",
+          "count": 1
+        },
+        {
+          "item": "ars_nouveau:glyph_amplify",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "ars_nouveau:glyph_summon_wolves",
+          "count": 1
+        },
+        {
+          "item": "ars_nouveau:glyph_heal",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "ars_nouveau:familiar_bookwyrm",
+          "count": 1
+        },
+        {
+          "item": "ars_nouveau:familiar_drygmy",
+          "count": 1
+        },
+        {
+          "item": "ars_nouveau:familiar_starbuncle",
+          "count": 1
+        },
+        {
+          "item": "ars_nouveau:familiar_whirlisprig",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

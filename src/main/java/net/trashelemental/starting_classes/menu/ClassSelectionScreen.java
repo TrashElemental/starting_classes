@@ -13,6 +13,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.trashelemental.starting_classes.StartingClasses;
 import net.trashelemental.starting_classes.client.SelectClassPacket;
 import net.trashelemental.starting_classes.client.StartingClassesNetworking;
@@ -25,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@OnlyIn(Dist.CLIENT)
 public class ClassSelectionScreen extends Screen {
 
     private static final ResourceLocation CLASS_PANEL = StartingClasses.prefix("textures/gui/class_selection_panel.png");

@@ -87,7 +87,7 @@
       "type": "mob",
       "entityId": "minecraft:llama",
       "count": 1,
-      "nbt": "{Tame:1b,Strength:5,ChestedHorse:1b,DecorItem:{id:\"minecraft:blue_carpet\",Count:1b}}"    }
-  ],
-  "attributes": []
+      "nbt": "{Tame:1b,Strength:5,ChestedHorse:1b,DecorItem:{id:\"minecraft:blue_carpet\",Count:1b}}"
+    }
+  ]
 }

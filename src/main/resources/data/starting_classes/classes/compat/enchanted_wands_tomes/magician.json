@@ -1,8 +1,8 @@
 {
-  "id": "starting_classes:scholar",
-  "name": "Scholar",
-  "description": "A novice enchanter, eager to learn more.",
-  "source": "Starting Classes",
+  "id": "enchanted_wands_tomes:magician",
+  "name": "Magician",
+  "description": "A novice magician, hungering for arcane knowledge.",
+  "source": "Enchanted Wands & Tomes",
   "icon": {
     "type": "item",
     "itemId": "minecraft:book"
@@ -13,14 +13,39 @@
       "type": "choice",
       "options": [
         {
-          "item": "minecraft:wooden_sword",
+          "item": "enchanted_wands_tomes:wand_iron",
           "count": 1,
           "nbt": "{Enchantments:[{id:\"minecraft:fire_aspect\",lvl:1}]}"
         },
         {
-          "item": "minecraft:wooden_sword",
+          "item": "enchanted_wands_tomes:wand_iron",
           "count": 1,
           "nbt": "{Enchantments:[{id:\"minecraft:sharpness\",lvl:1}]}"
+        },
+        {
+          "item": "enchanted_wands_tomes:wand_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:blast_protection\",lvl:1}]}"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "enchanted_wands_tomes:tome_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}"
+        },
+        {
+          "item": "enchanted_wands_tomes:tome_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:feather_falling\",lvl:1}]}"
+        },
+        {
+          "item": "enchanted_wands_tomes:tome_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:blast_protection\",lvl:1}]}"
         }
       ]
     },
@@ -73,13 +98,6 @@
       "item": {
         "item": "minecraft:experience_bottle",
         "count": 3
-      }
-    },
-    {
-      "type": "fixed",
-      "item": {
-        "item": "enchanted_wands_tomes:wand_stone",
-        "count": 1
       }
     }
   ]

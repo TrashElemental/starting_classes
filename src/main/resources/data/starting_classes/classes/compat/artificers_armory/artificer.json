@@ -1,0 +1,67 @@
+{
+  "id": "artificers_armory:artificer",
+  "name": "Artificer",
+  "description": "An arcane weaponsmith with a versatile array of tools.",
+  "source": "Artificer's Armory",
+  "icon": {
+    "type": "item",
+    "itemId": "artificers_armory:chime_wood"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:leather_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_beef",
+        "count": 6
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "artificers_armory:firebrand_copper",
+          "count": 1
+        },
+        {
+          "item": "artificers_armory:blight_copper",
+          "count": 1
+        },
+        {
+          "item": "artificers_armory:tuning_fork_copper",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "artificers_armory:chime_stone",
+          "count": 1
+        },
+        {
+          "item": "artificers_armory:spirit_candle_stone",
+          "count": 1
+        },
+        {
+          "item": "artificers_armory:oculus_stone",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "attributes": []
+}
