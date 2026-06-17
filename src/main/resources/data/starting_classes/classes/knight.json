@@ -1,0 +1,80 @@
+{
+  "id": "starting_classes:knight",
+  "name": "Knight",
+  "description": "A knight-errant in search of adventure.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:iron_sword"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:leather_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_leggings",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_boots",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_beef",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:shield",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:bow",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:arrow",
+        "count": 16
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:iron_sword",
+          "count": 1
+        },
+        {
+          "item": "minecraft:iron_axe",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

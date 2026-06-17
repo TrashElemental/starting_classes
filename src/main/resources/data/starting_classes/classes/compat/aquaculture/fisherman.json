@@ -1,0 +1,84 @@
+{
+  "id": "aquaculture:mariner",
+  "name": "Fisherman",
+  "description": "A fisherman who makes their living on the rivers and oceans.",
+  "source": "Aquaculture 2",
+  "icon": {
+    "type": "item",
+    "itemId": "aquaculture:iron_fishing_rod"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:turtle_helmet",
+      "count": 1,
+      "nbt": "{Enchantments:[{id:\"minecraft:aqua_affinity\",lvl:1}]}"
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_boots",
+        "count": 1,
+        "nbt": "{Enchantments:[{id:\"minecraft:depth_strider\",lvl:1}]}"
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_cod",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:iron_fishing_rod",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:iron_fillet_knife",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:tackle_box",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:iron_hook",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:bobber",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:fishing_line",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "aquaculture:worm",
+        "count": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "starting_classes:miner",
+  "name": "Miner",
+  "description": "A miner with a keen eye for finding precious resources.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:iron_pickaxe"
+  },
+  "equipment": [
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:iron_pickaxe",
+          "count": 1
+        },
+        {
+          "item": "minecraft:stone_pickaxe",
+          "count": 1,
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:fortune": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:torch",
+        "count": 32
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_helmet",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_boots",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:bread",
+        "count": 10
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:chest",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:furnace",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:charcoal",
+        "count": 16
+      }
+    }
+  ]
+}

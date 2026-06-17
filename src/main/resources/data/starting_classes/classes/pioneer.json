@@ -1,0 +1,86 @@
+{
+  "id": "starting_classes:pioneer",
+  "name": "Pioneer",
+  "description": "A settler traveling the land to establish a new home.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:iron_hoe"
+  },
+  "equipment": [
+
+    {
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:stone_axe",
+      "count": 1
+    }
+  },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:stone_shovel",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:stone_hoe",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:red_bed",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:lead",
+        "count": 3
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:potato",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:carrot",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:beetroot_seeds",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:donkey_spawn_egg",
+        "count": 1
+      }
+    },
+    {
+      "type": "mob",
+      "entityId": "minecraft:donkey",
+      "count": 1,
+      "nbt": "{Tame:1b,ChestedHorse:1b,SaddleItem:{id:\"minecraft:saddle\",Count:1b}}"
+    }
+  ]
+}

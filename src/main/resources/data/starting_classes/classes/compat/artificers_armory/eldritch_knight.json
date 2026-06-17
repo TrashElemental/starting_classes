@@ -1,0 +1,84 @@
+{
+  "id": "artificers_armory:eldritch_knight",
+  "name": "Eldritch Knight",
+  "description": "A knight-errant in search of arcane knowledge.",
+  "source": "Artificer's Armory",
+  "icon": {
+    "type": "item",
+    "itemId": "artificers_armory:firebrand_wood"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:leather_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_leggings",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_boots",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_beef",
+        "count": 6
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:shield",
+        "count": 1
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:iron_sword",
+          "count": 1
+        },
+        {
+          "item": "minecraft:iron_axe",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "artificers_armory:firebrand_stone",
+          "count": 1
+        },
+        {
+          "item": "artificers_armory:chime_stone",
+          "count": 1
+        },
+        {
+          "item": "artificers_armory:oculus_stone",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,104 @@
+{
+  "id": "enchanted_wands_tomes:magician",
+  "name": "Magician",
+  "description": "A novice magician, hungering for arcane knowledge.",
+  "source": "Enchanted Wands & Tomes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:book"
+  },
+  "equipment": [
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "enchanted_wands_tomes:wand_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:fire_aspect\",lvl:1}]}"
+        },
+        {
+          "item": "enchanted_wands_tomes:wand_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:sharpness\",lvl:1}]}"
+        },
+        {
+          "item": "enchanted_wands_tomes:wand_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:blast_protection\",lvl:1}]}"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "enchanted_wands_tomes:tome_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}"
+        },
+        {
+          "item": "enchanted_wands_tomes:tome_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:feather_falling\",lvl:1}]}"
+        },
+        {
+          "item": "enchanted_wands_tomes:tome_iron",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:blast_protection\",lvl:1}]}"
+        }
+      ]
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1,
+        "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}"
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:enchanting_table",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:bookshelf",
+        "count": 3
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:lapis_lazuli",
+        "count": 5
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:book",
+        "count": 3
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:writable_book",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:experience_bottle",
+        "count": 3
+      }
+    }
+  ]
+}

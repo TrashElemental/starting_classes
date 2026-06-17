@@ -1,0 +1,115 @@
+{
+  "id": "starting_classes:alexsmobs:falconer",
+  "name": "Falconer",
+  "description": "A woodsman who hunts with his bow alongside his eagle companion.",
+  "source": "Alex's Mobs",
+  "icon": {
+    "type": "item",
+    "itemId": "alexsmobs:falconry_glove"
+  },
+  "equipment": [
+    {
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:leather_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_leggings",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_boots",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_mutton",
+        "count": 6
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:bow",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:power\",lvl:1}]}"
+        },
+        {
+          "item": "minecraft:crossbow",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:quick_charge\",lvl:1}]}"
+        }
+      ]
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:arrow",
+        "count": 64
+      }
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:stone_sword",
+          "count": 1
+        },
+        {
+          "item": "minecraft:stone_axe",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "alexsmobs:falconry_glove",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "alexsmobs:falconry_hood",
+        "count": 5
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "alexsmobs:spawn_egg_bald_eagle",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "supplementaries:quiver",
+        "count": 1
+      }
+    },
+    {
+      "type": "mob",
+      "entityId": "alexsmobs:bald_eagle",
+      "count": 1
+    }
+  ]
+}

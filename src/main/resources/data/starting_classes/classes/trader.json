@@ -1,0 +1,97 @@
+{
+  "id": "starting_classes:trader",
+  "name": "Trader",
+  "description": "A wandering trader seeking their fortune alongside their trusty llama.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:emerald"
+  },
+  "equipment": [
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:wooden_sword",
+          "count": 1
+        },
+        {
+          "item": "minecraft:wooden_axe",
+          "count": 1
+        }
+      ]
+    },
+    {
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:stone_pickaxe",
+      "count": 1
+    }
+  },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:campfire",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:bread",
+        "count": 10
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:emerald",
+        "count": 16
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:lead",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:map",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:potion",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:invisibility"
+          }
+        }
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:llama_spawn_egg",
+        "count": 1
+      }
+    },
+    {
+      "type": "mob",
+      "entityId": "minecraft:llama",
+      "count": 1,
+      "nbt": "{Strength:5,Tame:1,ChestedHorse:1,body_armor_item:{id:blue_carpet,count:1}}"
+    }
+  ]
+}

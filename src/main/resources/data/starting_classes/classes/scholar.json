@@ -1,0 +1,104 @@
+{
+  "id": "starting_classes:scholar",
+  "name": "Scholar",
+  "description": "A novice enchanter, eager to learn more.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:book"
+  },
+  "equipment": [
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "minecraft:wooden_sword",
+          "count": 1,
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:fire_aspect": 1
+              }
+            }
+          }
+        },
+        {
+          "item": "minecraft:wooden_sword",
+          "count": 1,
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:sharpness": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1,
+        "components": {
+          "minecraft:enchantments": {
+            "levels": {
+              "minecraft:protection": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:enchanting_table",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:bookshelf",
+        "count": 3
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:lapis_lazuli",
+        "count": 5
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:book",
+        "count": 3
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:writable_book",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:experience_bottle",
+        "count": 3
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "enchanted_wands_tomes:wand_stone",
+        "count": 1
+      }
+    }
+  ]
+}

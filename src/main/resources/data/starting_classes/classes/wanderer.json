@@ -1,0 +1,12 @@
+{
+  "id": "starting_classes:wanderer",
+  "name": "Wanderer",
+  "description": "A traveler with no particular destiny, but limitless potential. (Start without any class equipment.)",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:grass_block"
+  },
+  "equipment": [
+  ]
+}

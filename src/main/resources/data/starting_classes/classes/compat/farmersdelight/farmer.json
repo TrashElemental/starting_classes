@@ -1,0 +1,104 @@
+{
+  "id": "farmersdelight:farmer",
+  "name": "Farmer",
+  "description": "A delightful farmer traveling the world in culinary pursuits.",
+  "source": "Farmer's Delight",
+  "icon": {
+    "type": "item",
+    "itemId": "farmersdelight:cooking_pot"
+  },
+  "equipment": [
+
+    {
+    "type": "fixed",
+    "item": {
+      "item": "farmersdelight:iron_knife",
+      "count": 1
+    }
+  },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "farmersdelight:cooking_pot",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "farmersdelight:skillet",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:red_bed",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:lead",
+        "count": 3
+      }
+    },
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "farmersdelight:rice",
+          "count": 5
+        },
+        {
+          "item": "minecraft:carrot",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "farmersdelight:cabbage_seeds",
+          "count": 5
+        },
+        {
+          "item": "minecraft:potato",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "farmersdelight:tomato_seeds",
+          "count": 5
+        },
+        {
+          "item": "minecraft:beetroot_seeds",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:donkey_spawn_egg",
+        "count": 1
+      }
+    },
+    {
+      "type": "mob",
+      "entityId": "minecraft:donkey",
+      "count": 1,
+      "nbt": "{Tame:1b,ChestedHorse:1b,SaddleItem:{id:\"minecraft:saddle\",Count:1b}}"
+    }
+  ]
+}

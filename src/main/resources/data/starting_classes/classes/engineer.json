@@ -1,0 +1,84 @@
+{
+  "id": "starting_classes:engineer",
+  "name": "Engineer",
+  "description": "An artisan with skills in crafting and tinkering with mechanisms.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "minecraft:redstone"
+  },
+  "equipment": [
+
+    {
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:crossbow",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:arrow",
+        "count": 32
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:stone_pickaxe",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:crafting_table",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:anvil",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:chest",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:minecart",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:rail",
+        "count": 16
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:redstone",
+        "count": 16
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "artificers_armory:wrench_stone",
+        "count": 1
+      }
+    }
+  ]
+}
