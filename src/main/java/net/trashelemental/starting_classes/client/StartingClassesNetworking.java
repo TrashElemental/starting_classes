@@ -26,5 +26,17 @@ public class StartingClassesNetworking {
                 SelectClassPacket.STREAM_CODEC,
                 SelectClassPacket::handle
         );
+
+        registrar.playToClient(
+                SyncClassSelectionPacket.TYPE,
+                SyncClassSelectionPacket.STREAM_CODEC,
+                SyncClassSelectionPacket::handle
+        );
+
+        registrar.playToClient(
+                ForceOpenClassSelectionPacket.TYPE,
+                ForceOpenClassSelectionPacket.STREAM_CODEC,
+                ForceOpenClassSelectionPacket::handle
+        );
     }
 }

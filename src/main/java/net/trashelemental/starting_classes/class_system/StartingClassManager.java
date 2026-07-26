@@ -1,8 +1,5 @@
-package net.trashelemental.starting_classes.menu.class_system;
+package net.trashelemental.starting_classes.class_system;
 
-import com.mojang.serialization.Codec;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.trashelemental.starting_classes.StartingClasses;
@@ -13,6 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class StartingClassManager {
 
@@ -20,7 +18,9 @@ public class StartingClassManager {
     private static final List<Consumer<List<StartingClassData>>> LOAD_CALLBACKS = new ArrayList<>();
 
     public static List<StartingClassData> getClasses() {
-        return new ArrayList<>(CLASSES.values());
+        return CLASSES.values().stream()
+                .filter(classData -> !ClassBlacklist.isBlacklisted(classData.id()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     public static void clear() {
@@ -45,7 +45,7 @@ public class StartingClassManager {
 
     public static void onClassesLoaded(Consumer<List<StartingClassData>> callback) {
         if (!CLASSES.isEmpty()) {
-            callback.accept(new ArrayList<>(CLASSES.values()));
+            callback.accept(getClasses());
         } else {
             LOAD_CALLBACKS.add(callback);
         }
@@ -57,7 +57,7 @@ public class StartingClassManager {
 
         for (Consumer<List<StartingClassData>> callback : callbacksCopy) {
             try {
-                callback.accept(new ArrayList<>(CLASSES.values()));
+                callback.accept(getClasses());
             } catch (Exception e) {
                 e.printStackTrace();
             }

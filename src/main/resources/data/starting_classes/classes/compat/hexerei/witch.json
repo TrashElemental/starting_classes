@@ -1,0 +1,72 @@
+{
+  "id": "starting_classes:witch",
+  "name": "Witch",
+  "description": "A hermit witch who lives in the woods, conducting magical experiments to discover the secrets of nature.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "hexerei:witch_helmet"
+  },
+  "equipment": [{
+    "type": "fixed",
+    "item": {
+      "item": "hexerei:witch_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "hexerei:witch_chestplate",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "hexerei:witch_boots",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "hexerei:book_of_shadows",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "hexerei:witch_hazel_altar",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "hexerei:witch_hazel_broom",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "hexerei:mixing_cauldron",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:baked_potato",
+        "count": 5
+      }
+    },
+    {
+      "type": "mob",
+      "entityId": "hexerei:crow",
+      "count": 1
+    }
+  ]
+}

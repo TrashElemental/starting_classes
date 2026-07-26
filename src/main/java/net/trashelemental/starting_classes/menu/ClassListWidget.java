@@ -7,7 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.trashelemental.starting_classes.StartingClasses;
-import net.trashelemental.starting_classes.menu.class_system.StartingClassData;
+import net.trashelemental.starting_classes.class_system.StartingClassData;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,14 +2,18 @@ package net.trashelemental.starting_classes.util;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SpawnEggItem;
-import net.trashelemental.starting_classes.menu.class_system.*;
+import net.trashelemental.starting_classes.StartingClasses;
+import net.trashelemental.starting_classes.class_system.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class EquipmentDistributor {
 
@@ -59,9 +63,76 @@ public class EquipmentDistributor {
                 TamedMobUtil.spawnAndTameMob(player, entityType, mob.nbtString());
             }
         }
+
+        else if (entry instanceof CommandEntry cmd) {
+            //This code replaces instances of PLAYER in the command with the player's name.
+            //This is done to allow for commands that require a player's name, such as /effect give PLAYER or /tp PLAYER.
+            String expandedCommand = cmd.command().replace("PLAYER", player.getName().getString());
+
+            var commandDispatcher = player.getServer().getCommands().getDispatcher();
+            var commandSourceStack = player.getServer().createCommandSourceStack()
+                    .withPosition(player.position())
+                    .withSuppressedOutput();
+            try {
+                var parseResults = commandDispatcher.parse(expandedCommand, commandSourceStack);
+                player.getServer().getCommands().performCommand(parseResults, expandedCommand);
+            } catch (Exception e) {
+                System.err.println("Failed to execute command: " + expandedCommand);
+                e.printStackTrace();
+            }
+        }
+        else if (entry instanceof AttributeModifierEntry attributeEntry) {
+            applyAttributeModifier(player, attributeEntry);
+        }
+
+    }
+
+    /**
+     * Apply a permanent attribute modifier with a deterministic UUID
+     */
+    public static void applyAttributeModifier(Player player, AttributeModifierEntry entry) {
+        var attribute = BuiltInRegistries.ATTRIBUTE.get(entry.bonus().attribute());
+        if (attribute == null) {
+            System.err.println("Unknown attribute: " + entry.bonus().attribute());
+            return;
+        }
+
+        var attributeHolder = BuiltInRegistries.ATTRIBUTE.getHolder(entry.bonus().attribute());
+        if (attributeHolder.isEmpty()) {
+            System.err.println("Cannot find holder for attribute: " + entry.bonus().attribute());
+            return;
+        }
+
+        var attributeInstance = player.getAttributes().getInstance(attributeHolder.get());
+        if (attributeInstance == null) {
+            return;
+        }
+
+        String uuidString = entry.getDeterministicUUID().toString();
+        var modifierId = StartingClasses.prefix("attribute_" + uuidString);
+
+        var modifier = new net.minecraft.world.entity.ai.attributes.AttributeModifier(
+                modifierId,
+                entry.bonus().amount(),
+                entry.bonus().operation()
+        );
+
+        attributeInstance.removeModifier(modifierId);
+        attributeInstance.addPermanentModifier(modifier);
     }
 
     private static void giveItemToPlayer(Player player, ItemStack stack) {
+
+        if (stack.getItem() instanceof ArmorItem armor) {
+            EquipmentSlot slot = armor.getEquipmentSlot();
+            ItemStack current = player.getItemBySlot(slot);
+
+            if (current.isEmpty()) {
+                player.setItemSlot(slot, stack);
+                return;
+            }
+        }
+
         if (!player.getInventory().add(stack)) {
             player.drop(stack, false);
         }

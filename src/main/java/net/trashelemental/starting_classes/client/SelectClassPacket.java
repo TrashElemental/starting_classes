@@ -4,16 +4,19 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.server.level.ServerPlayer;
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.trashelemental.starting_classes.Config;
 import net.trashelemental.starting_classes.StartingClasses;
 import net.trashelemental.starting_classes.attachment.PlayerClassHelper;
-import net.trashelemental.starting_classes.menu.class_system.StartingClassData;
-import net.trashelemental.starting_classes.menu.class_system.StartingClassManager;
+import net.trashelemental.starting_classes.class_system.ClassBlacklist;
+import net.trashelemental.starting_classes.class_system.ClassSelectionTracker;
+import net.trashelemental.starting_classes.class_system.StartingClassData;
+import net.trashelemental.starting_classes.class_system.StartingClassManager;
 import net.trashelemental.starting_classes.util.EquipmentDistributor;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Supplier;
 
 public record SelectClassPacket(String classId, List<Integer> choices) implements CustomPacketPayload {
 
@@ -61,22 +64,27 @@ public record SelectClassPacket(String classId, List<Integer> choices) implement
 
         ServerPlayer player = (ServerPlayer) context.player();
 
-        StartingClassData clazz =
-                StartingClassManager.getClassById(packet.classId());
+        StartingClassData clazz = StartingClassManager.getClassById(packet.classId());
 
         if (clazz == null) {
             return;
         }
 
-        EquipmentDistributor.distributeEquipment(
-                player,
-                clazz,
-                packet.choices()
-        );
+        EquipmentDistributor.distributeEquipment(player, clazz, packet.choices());
 
-        PlayerClassHelper.setSelectedClass(
-                player,
-                clazz.id()
-        );
+        PlayerClassHelper.setSelectedClass(player, clazz.id());
+
+        if (Config.BLACKLIST_AFTER_CHOICE.get()) {
+            int selectionCount = ClassSelectionTracker.incrementSelectionCount(clazz.id());
+            int maxSelections = Config.BLACKLIST_AFTER_CHOICE_NUMBER.get();
+
+            if (selectionCount >= maxSelections) {
+                ClassBlacklist.blacklist(clazz.id());
+                StartingClasses.LOGGER.info("Class '{}' has been selected {} times and is now blacklisted",
+                        clazz.id(), selectionCount);
+            }
+        }
+
+        PacketDistributor.sendToPlayer(player, new SyncClassSelectionPacket(clazz.id()));
     }
 }

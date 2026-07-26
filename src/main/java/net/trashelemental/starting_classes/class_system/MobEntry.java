@@ -1,4 +1,4 @@
-package net.trashelemental.starting_classes.menu.class_system;
+package net.trashelemental.starting_classes.class_system;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;

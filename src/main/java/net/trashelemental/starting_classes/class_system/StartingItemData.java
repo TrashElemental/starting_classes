@@ -1,19 +1,14 @@
-package net.trashelemental.starting_classes.menu.class_system;
+package net.trashelemental.starting_classes.class_system;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
-import net.minecraft.nbt.TagParser;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
-import java.util.Optional;
 
 public record StartingItemData(ResourceLocation itemId, int count, @Nullable DataComponentPatch components) {
 

@@ -1,0 +1,84 @@
+{
+  "id": "starting_classes:botanist",
+  "name": "Botanist",
+  "description": "A botanist who studies the secrets of nature and its mysterious mana.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "botania:lexicon"
+  },
+  "equipment": [
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "botania:lexicon",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "botania:flower_bag",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "botania:mana_tablet",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "botania:apothecary_default",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "botania:mana_pool",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "botania:pure_daisy",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "botania:twig_wand",
+        "count": 1
+      }
+    },
+
+    {
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:leather_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:baked_potato",
+        "count": 6
+      }
+    }
+  ]
+}

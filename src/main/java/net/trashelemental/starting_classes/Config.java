@@ -22,6 +22,13 @@ public class Config
             .comment("Should starting mobs have an infinite regeneration one effect?")
             .define("Starting mobs infinite regen:", false);
 
+    public static final ModConfigSpec.BooleanValue BLACKLIST_AFTER_CHOICE = BUILDER
+            .comment("Should a class be disabled from selection after it has been chosen a certain number of times?")
+            .define("Disable classes after selection:", false);
+    public static final ModConfigSpec.IntValue BLACKLIST_AFTER_CHOICE_NUMBER = BUILDER
+            .comment("If the above is true, how many times can a class be chosen by players before it is disabled?")
+            .defineInRange("Number of times a class can be chosen before it is disabled:", 1, 1, 999);
+
 
 
     static final ModConfigSpec SPEC = BUILDER.build();

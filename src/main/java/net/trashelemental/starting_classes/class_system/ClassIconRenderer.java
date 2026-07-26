@@ -1,4 +1,4 @@
-package net.trashelemental.starting_classes.menu.class_system;
+package net.trashelemental.starting_classes.class_system;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.core.registries.BuiltInRegistries;
