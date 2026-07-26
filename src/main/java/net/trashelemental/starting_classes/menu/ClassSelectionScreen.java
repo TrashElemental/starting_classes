@@ -16,10 +16,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.trashelemental.starting_classes.StartingClasses;
+import net.trashelemental.starting_classes.class_system.*;
 import net.trashelemental.starting_classes.client.SelectClassPacket;
 import net.trashelemental.starting_classes.client.StartingClassesNetworking;
-import net.trashelemental.starting_classes.menu.class_system.*;
-import org.jetbrains.annotations.NotNull;
 import org.lwjgl.glfw.GLFW;
 
 import java.util.ArrayList;
@@ -77,7 +76,7 @@ public class ClassSelectionScreen extends Screen {
     private Button previousPageButton;
 
     public ClassSelectionScreen() {
-        super(Component.literal("Starting Classes"));
+        super(Component.translatable("gui.starting_classes.title"));
 
         StartingClassManager.onClassesLoaded(classes -> {
             if (!classes.isEmpty()) {
@@ -99,9 +98,12 @@ public class ClassSelectionScreen extends Screen {
         List<StartingClassData> classes = StartingClassManager.getClasses();
 
         if (classes.isEmpty()) {
-            this.addRenderableWidget(new Button.Builder(Component.literal("No classes available"), (button) -> {})
-                    .bounds(this.width / 2 - 100, this.height / 2, 200, 20)
-                    .build());
+
+            StartingClasses.LOGGER.error(
+                    "No starting classes were loaded. Check datapacks and logs."
+            );
+
+            Minecraft.getInstance().setScreen(null);
             return;
         }
 
@@ -125,14 +127,18 @@ public class ClassSelectionScreen extends Screen {
 
         this.addRenderableWidget(classListWidget);
 
-        int bookWidth = this.width - 140 - 20;
+        int bookScreenX = (int)(bookPanelX * GUI_SCALE);
+        int bookScreenY = (int)(bookPanelY * GUI_SCALE);
+        int bookScreenWidth = (int)(BOOK_TEXTURE_WIDTH * GUI_SCALE);
+        int bookScreenHeight = (int)(BOOK_TEXTURE_HEIGHT * GUI_SCALE);
+
         int buttonWidth = 120;
         int buttonHeight = 20;
-        int buttonX = 140 + (bookWidth / 2) - (buttonWidth / 2);
-        int buttonY = this.height - 60;
+        int buttonX = bookScreenX + (bookScreenWidth / 2) - (buttonWidth / 2) - 40;
+        int buttonY = bookScreenY + bookScreenHeight - 30;
 
         this.addRenderableWidget(
-                Button.builder(Component.literal("Start With This Class"),
+                Button.builder(Component.translatable("gui.starting_classes.start"),
                                 button -> {
                                     ClassSelectionData data = buildSelectionData();
                                     StartingClassesNetworking.CHANNEL.sendToServer(new SelectClassPacket(data.classId(), data.choiceIndices()));
@@ -151,7 +157,7 @@ public class ClassSelectionScreen extends Screen {
                             rebuildUI();
                         }
                 )
-                .bounds(140 + 218, this.height - 140, 20, 20)
+                .bounds(bookScreenX + bookScreenWidth - 81, bookScreenY + bookScreenHeight - 120, 20, 20)
                 .build();
 
         this.addRenderableWidget(previousPageButton);
@@ -164,7 +170,7 @@ public class ClassSelectionScreen extends Screen {
                             rebuildUI();
                         }
                 )
-                .bounds(140 + 218, this.height - 140, 20, 20)
+                .bounds(bookScreenX + bookScreenWidth - 81, bookScreenY + bookScreenHeight - 120, 20, 20)
                 .build();
 
         this.addRenderableWidget(nextPageButton);
@@ -179,7 +185,7 @@ public class ClassSelectionScreen extends Screen {
         this.renderBackground(guiGraphics);
 
         if (selectedClass == null) {
-                guiGraphics.drawCenteredString(font, "No classes loaded", this.width / 2, this.height / 2, 0xFFFFFF);
+                guiGraphics.drawCenteredString(font, Component.translatable("gui.starting_classes.error"), this.width / 2, this.height / 2, 0xFFFFFF);
             return;
         }
 
@@ -394,17 +400,20 @@ public class ClassSelectionScreen extends Screen {
 
     }
 
-    private static void renderEquipmentPage(Screen screen, GuiGraphics guiGraphics, StartingClassData selectedClass, Font font, int mouseX, int mouseY) {
+    private static void renderEquipmentPage(ClassSelectionScreen screen, GuiGraphics guiGraphics, StartingClassData selectedClass, Font font, int mouseX, int mouseY) {
 
         hoveredEquipmentStack = ItemStack.EMPTY;
 
-        int bookX = 140;
-        int startX = bookX + 120;
-        int startY = 80;
+        int bookScreenX = (int)(screen.bookPanelX * GUI_SCALE) - 5;
+        int bookScreenY = (int)(screen.bookPanelY * GUI_SCALE);
 
-        int slotSpacing = 20;
+        int startX = bookScreenX + (int)(45 * GUI_SCALE);
+        int startY = bookScreenY + (int)(80 * GUI_SCALE);
 
-        guiGraphics.drawString(font, "Starting Equipment", startX - 5, 50, 0x000000, false);
+        int slotSpacing = (int)(30 * GUI_SCALE);
+
+        int headerY = bookScreenY + (int)(50 * GUI_SCALE);
+        guiGraphics.drawString(font, Component.translatable("gui.starting_classes.equipment"), startX - 5, headerY, 0x000000, false);
 
         List<EquipmentEntry> items = selectedClass.equipment();
 
@@ -473,10 +482,12 @@ public class ClassSelectionScreen extends Screen {
 
         List<EquipmentEntry> items = selectedClass.equipment();
 
-        int bookX = 140;
-        int startX = bookX + 110;
-        int startY = 80;
-        int slotSpacing = 20;
+        int bookScreenX = (int)(bookPanelX * GUI_SCALE) - 5;
+        int bookScreenY = (int)(bookPanelY * GUI_SCALE);
+
+        int startX = bookScreenX + (int)(25 * GUI_SCALE);
+        int startY = bookScreenY + (int)(85 * GUI_SCALE);
+        int slotSpacing = (int)(30 * GUI_SCALE);
 
         for (int i = 0; i < items.size(); i++) {
 

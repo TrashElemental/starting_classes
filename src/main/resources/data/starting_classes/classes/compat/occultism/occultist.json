@@ -1,0 +1,84 @@
+{
+  "id": "starting_classes:occultist",
+  "name": "Occultist",
+  "description": "An occultist who studies the mysteries of the spirits.",
+  "source": "Starting Classes",
+  "icon": {
+    "type": "item",
+    "itemId": "occultism:dictionary_of_spirits"
+  },
+  "equipment": [
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "occultism:dictionary_of_spirits",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "occultism:butcher_knife",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "occultism:chalk_white",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "occultism:brush",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "occultism:otherworld_goggles",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "occultism:candle_white",
+        "count": 4
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "occultism:golden_sacrificial_bowl",
+        "count": 4
+      }
+    },
+
+    {
+    "type": "fixed",
+    "item": {
+      "item": "minecraft:leather_helmet",
+      "count": 1
+    }
+  },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:leather_chestplate",
+        "count": 1
+      }
+    },
+    {
+      "type": "fixed",
+      "item": {
+        "item": "minecraft:cooked_beef",
+        "count": 6
+      }
+    }
+  ]
+}

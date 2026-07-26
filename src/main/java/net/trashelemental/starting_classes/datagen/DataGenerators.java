@@ -7,11 +7,11 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.trashelemental.starting_classes.StartingClasses;
 import net.trashelemental.starting_classes.datagen.loot.ModLootTableProvider;
 import net.trashelemental.starting_classes.datagen.tags.ModBlockTagGenerator;
 import net.trashelemental.starting_classes.datagen.tags.ModEntityTagGenerator;
 import net.trashelemental.starting_classes.datagen.tags.ModItemTagGenerator;
-import net.trashelemental.starting_classes.StartingClasses;
 
 import java.util.concurrent.CompletableFuture;
 

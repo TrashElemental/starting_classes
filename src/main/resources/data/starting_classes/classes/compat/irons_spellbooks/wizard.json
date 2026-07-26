@@ -1,0 +1,142 @@
+{
+  "id": "irons_spellbooks:wizard",
+  "name": "Wizard",
+  "description": "An apprentice mage in search of arcane secrets, starting with a selection of spells.",
+  "source": "Iron's Spellbooks",
+  "icon": {
+    "type": "item",
+    "itemId": "irons_spellbooks:copper_spell_book"
+  },
+
+  "equipment": [
+
+    {
+    "type": "fixed",
+    "item": {
+      "item": "irons_spellbooks:wandering_magician_helmet",
+      "count": 1
+    }
+  },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "irons_spellbooks:wandering_magician_chestplate",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "irons_spellbooks:wandering_magician_leggings",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "irons_spellbooks:wandering_magician_boots",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "irons_spellbooks:copper_spell_book",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "irons_spellbooks:inscription_table",
+        "count": 1
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "irons_spellbooks:common_ink",
+        "count": 3
+      }
+    },
+
+    {
+      "type": "fixed",
+      "item": {
+        "item": "irons_spellbooks:arcane_essence",
+        "count": 3
+      }
+    },
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "irons_spellbooks:scroll",
+          "count": 1,
+          "nbt": "{'irons_spellbooks:spell_container':{maxSpells:1,mustEquip:0b,spellWheel:0b,data:[{index:0,id:'irons_spellbooks:magic_missile',locked:1b,level:1}]}}"
+        },
+        {
+          "item": "irons_spellbooks:scroll",
+          "count": 1,
+          "nbt": "{'irons_spellbooks:spell_container':{maxSpells:1,mustEquip:0b,spellWheel:0b,data:[{index:0,id:'irons_spellbooks:firecracker',locked:1b,level:1}]}}"
+        }
+      ]
+    },
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "irons_spellbooks:scroll",
+          "count": 1,
+          "nbt": "{'irons_spellbooks:spell_container':{maxSpells:1,mustEquip:0b,spellWheel:0b,data:[{index:0,id:'irons_spellbooks:healing_circle',locked:1b,level:1}]}}"
+        },
+        {
+          "item": "irons_spellbooks:scroll",
+          "count": 1,
+          "nbt": "{'irons_spellbooks:spell_container':{maxSpells:1,mustEquip:0b,spellWheel:0b,data:[{index:0,id:'irons_spellbooks:ray_of_siphoning',locked:1b,level:1}]}}"
+        }
+      ]
+    },
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "irons_spellbooks:scroll",
+          "count": 1,
+          "nbt": "{'irons_spellbooks:spell_container':{maxSpells:1,mustEquip:0b,spellWheel:0b,data:[{index:0,id:'irons_spellbooks:cone_of_cold',locked:1b,level:1}]}}"
+        },
+        {
+          "item": "irons_spellbooks:scroll",
+          "count": 1,
+          "nbt": "{'irons_spellbooks:spell_container':{maxSpells:1,mustEquip:0b,spellWheel:0b,data:[{index:0,id:'irons_spellbooks:blaze_storm',locked:1b,level:1}]}}"
+        }
+      ]
+    },
+
+    {
+      "type": "choice",
+      "options": [
+        {
+          "item": "irons_spellbooks:scroll",
+          "count": 1,
+          "nbt": "{'irons_spellbooks:spell_container':{maxSpells:1,mustEquip:0b,spellWheel:0b,data:[{index:0,id:'irons_spellbooks:electrocute',locked:1b,level:1}]}}"
+        },
+        {
+          "item": "irons_spellbooks:scroll",
+          "count": 1,
+          "nbt": "{'irons_spellbooks:spell_container':{maxSpells:1,mustEquip:0b,spellWheel:0b,data:[{index:0,id:'irons_spellbooks:poison_breath',locked:1b,level:1}]}}"
+        }
+      ]
+    }
+
+  ]
+}

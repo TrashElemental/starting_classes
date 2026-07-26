@@ -1,0 +1,6 @@
+{
+  "comment": "Add class IDs to the blacklist array to prevent them from loading. Pack makers can edit this file.",
+  "disabled_classes": [
+    "starting_classes:example_class_id"
+  ]
+}

@@ -1,12 +1,8 @@
 package net.trashelemental.starting_classes.client;
 
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
 import net.trashelemental.starting_classes.StartingClasses;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class StartingClassesNetworking {
 
@@ -38,5 +34,25 @@ public class StartingClassesNetworking {
                 OpenClassSelectionPacket::decode,
                 OpenClassSelectionPacket::handle
         );
+
+        CHANNEL.registerMessage(
+                packetId++,
+                ForceOpenClassSelectionPacket.class,
+                ForceOpenClassSelectionPacket::encode,
+                ForceOpenClassSelectionPacket::decode,
+                ForceOpenClassSelectionPacket::handle
+        );
+
+        CHANNEL.messageBuilder(SyncPlayerClassPacket.class, packetId++)
+                .decoder(SyncPlayerClassPacket::decode)
+                .encoder(SyncPlayerClassPacket::encode)
+                .consumerMainThread(SyncPlayerClassPacket::handle)
+                .add();
+
+        CHANNEL.messageBuilder(SyncClassesPacket.class, packetId++)
+                .decoder(SyncClassesPacket::decode)
+                .encoder(SyncClassesPacket::encode)
+                .consumerMainThread(SyncClassesPacket::handle)
+                .add();
     }
 }

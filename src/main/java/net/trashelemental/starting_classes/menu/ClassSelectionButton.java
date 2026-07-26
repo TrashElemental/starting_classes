@@ -4,16 +4,13 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.narration.NarratedElementType;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.trashelemental.starting_classes.StartingClasses;
-import net.trashelemental.starting_classes.menu.class_system.ClassIconRenderer;
-import net.trashelemental.starting_classes.menu.class_system.StartingClassData;
+import net.trashelemental.starting_classes.class_system.ClassIconRenderer;
+import net.trashelemental.starting_classes.class_system.StartingClassData;
 
-import java.awt.*;
 import java.util.function.Consumer;
 
 public class ClassSelectionButton extends AbstractWidget {

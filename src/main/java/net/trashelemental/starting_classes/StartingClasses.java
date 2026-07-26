@@ -3,7 +3,6 @@ package net.trashelemental.starting_classes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
@@ -17,6 +16,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.trashelemental.starting_classes.client.StartingClassesNetworking;
+import net.trashelemental.starting_classes.util.command.ClassBlacklistCommand;
+import net.trashelemental.starting_classes.util.command.ClassSelectionCommand;
 import org.slf4j.Logger;
 
 import java.util.AbstractMap;
@@ -58,9 +59,9 @@ public class StartingClasses
     }
 
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
-
+    public void onServerStarting(ServerStartingEvent event) {
+        ClassSelectionCommand.register(event.getServer().getCommands().getDispatcher());
+        ClassBlacklistCommand.register(event.getServer().getCommands().getDispatcher());
     }
     
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

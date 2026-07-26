@@ -1,5 +1,11 @@
 {
+  "gui.starting_classes.title": "Starting Classes",
+  "gui.starting_classes.start": "Start With This Class",
+  "gui.starting_classes.error": "No Classes Were Loaded",
+  "gui.starting_classes.equipment": "Starting Equipment",
+  "gui.starting_classes.close": "Close",
 
-
+  "key.starting_classes.open_class_selection": "Open Class Selection",
+  "key.categories.starting_classes": "Starting Classes"
 
 }

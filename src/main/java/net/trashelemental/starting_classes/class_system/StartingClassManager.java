@@ -1,8 +1,5 @@
-package net.trashelemental.starting_classes.menu.class_system;
+package net.trashelemental.starting_classes.class_system;
 
-import com.mojang.serialization.Codec;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.trashelemental.starting_classes.StartingClasses;
@@ -20,7 +17,9 @@ public class StartingClassManager {
     private static final List<Consumer<List<StartingClassData>>> LOAD_CALLBACKS = new ArrayList<>();
 
     public static List<StartingClassData> getClasses() {
-        return new ArrayList<>(CLASSES.values());
+        return CLASSES.values().stream()
+                .filter(clazz -> !ClassBlacklist.isBlacklisted(clazz.id()))
+                .collect(java.util.stream.Collectors.toList());
     }
 
     public static void clear() {
@@ -40,12 +39,19 @@ public class StartingClassManager {
 
     @Nullable
     public static StartingClassData getClassById(String id) {
-        return CLASSES.get(id);
+        StartingClassData clazz = CLASSES.get(id);
+        if (clazz != null && ClassBlacklist.isBlacklisted(id)) {
+            return null;
+        }
+        return clazz;
     }
 
     public static void onClassesLoaded(Consumer<List<StartingClassData>> callback) {
         if (!CLASSES.isEmpty()) {
-            callback.accept(new ArrayList<>(CLASSES.values()));
+            List<StartingClassData> filtered = CLASSES.values().stream()
+                    .filter(clazz -> !ClassBlacklist.isBlacklisted(clazz.id()))
+                    .collect(java.util.stream.Collectors.toList());
+            callback.accept(filtered);
         } else {
             LOAD_CALLBACKS.add(callback);
         }
@@ -57,7 +63,10 @@ public class StartingClassManager {
 
         for (Consumer<List<StartingClassData>> callback : callbacksCopy) {
             try {
-                callback.accept(new ArrayList<>(CLASSES.values()));
+                List<StartingClassData> filtered = CLASSES.values().stream()
+                        .filter(clazz -> !ClassBlacklist.isBlacklisted(clazz.id()))
+                        .collect(java.util.stream.Collectors.toList());
+                callback.accept(filtered);
             } catch (Exception e) {
                 e.printStackTrace();
             }

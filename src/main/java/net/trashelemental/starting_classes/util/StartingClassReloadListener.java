@@ -4,22 +4,16 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.JsonOps;
-import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;
-import net.minecraftforge.event.AddReloadListenerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.trashelemental.starting_classes.compat.ModCompatibility;
-import net.trashelemental.starting_classes.menu.class_system.StartingClassData;
-import net.trashelemental.starting_classes.menu.class_system.StartingClassManager;
+import net.trashelemental.starting_classes.class_system.StartingClassData;
+import net.trashelemental.starting_classes.class_system.StartingClassManager;
 import org.slf4j.Logger;
 
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executor;
 
 public class StartingClassReloadListener extends SimpleJsonResourceReloadListener {
 
